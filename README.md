@@ -3,6 +3,9 @@
 A compact toolkit of Windows-first scripts and templates for local project
 diagnostics, cleanup, DOCX handoff work, and agent troubleshooting.
 
+This repository also works as the index for a small public toolkit collection.
+See [Tool Index](docs/tool-index.md) for the related standalone tools.
+
 ## Included Tools
 
 - `scripts/memory-usage-report.ps1`: group running processes by memory usage.
@@ -12,6 +15,21 @@ diagnostics, cleanup, DOCX handoff work, and agent troubleshooting.
 - `docs/claude-code-windows-repair-playbook.md`: generic local agent repair checklist.
 - `docs/powershell-agent-snippets.md`: safe PowerShell snippets for local automation.
 - `scripts/app-install-on-non-c-drive.md`: checklist for installing apps outside `C:`.
+
+## Related Standalone Tools
+
+- [antigravity-zh-patch](https://github.com/20050401cc/antigravity-zh-patch):
+  Google Antigravity desktop Chinese UI patch.
+- [windows-release-sanitizer](https://github.com/20050401cc/windows-release-sanitizer):
+  create sanitized public release bundles from local Windows project folders.
+- [teacher-release-packager](https://github.com/20050401cc/teacher-release-packager):
+  create clean zip handoff packages for coursework, demos, and teacher submissions.
+- [jupyter-preprocessing-template](https://github.com/20050401cc/jupyter-preprocessing-template):
+  generate a flatten, normalize, and sigmoid teaching notebook.
+- [project-selfcheck-template](https://github.com/20050401cc/project-selfcheck-template):
+  run configurable file, compile, and smoke checks for project handoff folders.
+- [image-prompt-archive-template](https://github.com/20050401cc/image-prompt-archive-template):
+  archive image-generation prompts and export them to Markdown.
 
 ## Examples
 
