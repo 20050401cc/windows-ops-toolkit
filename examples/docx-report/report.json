@@ -1,0 +1,23 @@
+{
+  "title": "Demo Report",
+  "subtitle": "Generated from a JSON outline.",
+  "sections": [
+    {
+      "title": "Summary",
+      "paragraphs": [
+        "This report demonstrates a simple reproducible DOCX generation flow."
+      ]
+    },
+    {
+      "title": "Results",
+      "paragraphs": [
+        "Tables can be generated from structured JSON data."
+      ],
+      "table": [
+        ["Metric", "Value"],
+        ["Status", "Pass"],
+        ["Checks", "3"]
+      ]
+    }
+  ]
+}
