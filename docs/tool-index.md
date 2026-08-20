@@ -1,41 +1,28 @@
 # Tool Index
 
-This page groups the public tools by workflow. Each tool is kept in its own
-repository so it can stay small, focused, and easy to reuse.
+This repository is the consolidation point for small reusable utilities. Product repositories stay independent.
 
-## Windows Operations
+## Windows and Delivery
 
-| Tool | Purpose |
-| --- | --- |
-| [windows-ops-toolkit](https://github.com/20050401cc/windows-ops-toolkit) | Windows diagnostics, cache cleanup, DOCX helpers, local agent repair notes, and PowerShell snippets. |
-| [windows-release-sanitizer](https://github.com/20050401cc/windows-release-sanitizer) | Build sanitized public release folders and zip archives from local Windows projects. |
+- [Windows Ops Toolkit](https://github.com/20050401cc/windows-ops-toolkit): diagnostics, cleanup, DOCX helpers, and local agent repair notes.
+- [Release Sanitizer](../ops/windows-release-sanitizer/): remove private/heavy files and scan a public release.
+- [Project Self-check](../ops/project-selfcheck/): run required-file, compile, and smoke checks.
+- [Teacher Release Packager](../tools/teacher-release-packager/): create clean coursework and demo handoff packages.
 
-## Project Handoff
+## Templates
 
-| Tool | Purpose |
-| --- | --- |
-| [teacher-release-packager](https://github.com/20050401cc/teacher-release-packager) | Create clean handoff zip packages for coursework, demos, or teacher submissions. |
-| [project-selfcheck-template](https://github.com/20050401cc/project-selfcheck-template) | Run required-file, Python compile, and smoke-test checks before delivery. |
+- [Image Prompt Archive](../templates/image-prompt-archive/): store image-generation prompts as JSONL and export Markdown.
+- [Jupyter Preprocessing](../templates/jupyter-preprocessing/): generate a flatten/normalize/sigmoid teaching notebook.
 
-## Documents and Teaching
+## Experiments
 
-| Tool | Purpose |
-| --- | --- |
-| [jupyter-preprocessing-template](https://github.com/20050401cc/jupyter-preprocessing-template) | Generate a runnable flatten, normalize, and sigmoid Jupyter notebook. |
-| [windows-ops-toolkit DOCX helpers](https://github.com/20050401cc/windows-ops-toolkit/tree/main/src/windows_ops_toolkit) | Generate simple DOCX reports and check DOCX integrity. |
+- [Computer Use Lite](../experiments/computer-use-lite/): screenshot-driven computer-use proof of concept.
 
-## AI Workflow Utilities
+## Related Independent Projects
 
-| Tool | Purpose |
-| --- | --- |
-| [image-prompt-archive-template](https://github.com/20050401cc/image-prompt-archive-template) | Save image-generation prompts, output paths, tags, and notes as JSONL, then export Markdown. |
-| [antigravity-zh-patch](https://github.com/20050401cc/antigravity-zh-patch) | Apply a lightweight Chinese UI patch for Google Antigravity desktop. |
-
-## Recommended Order
-
-1. Use `windows-release-sanitizer` before publishing a local folder.
-2. Use `project-selfcheck-template` before handing off a project.
-3. Use `teacher-release-packager` when the output should be a clean zip.
-4. Use `windows-ops-toolkit` for Windows diagnostics and DOCX support.
-5. Use `image-prompt-archive-template` to preserve prompt history.
-6. Use `jupyter-preprocessing-template` for teaching notebooks.
+- [Antigravity Chinese Patch](https://github.com/20050401cc/antigravity-zh-patch)
+- [Tiny Web Lab](https://github.com/20050401cc/tiny-web-lab)
+- [ToonHub](https://github.com/20050401cc/toonhub)
+- [WOOKING 书阁](https://github.com/20050401cc/woking-novel)
+- [万象清算 Galgame](https://github.com/20050401cc/wanxiang-galgame)
+- [明日方舟助手](https://github.com/20050401cc/arknights-assistant)

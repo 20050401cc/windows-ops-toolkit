@@ -1,0 +1,6 @@
+{
+  "required": ["README.md", "run.bat", "src/main.py"],
+  "include": ["README.md", "run.bat", "src/**", "docs/**"],
+  "exclude": ["docs/private-notes.md"],
+  "readme": "Run run.bat to start the demo."
+}
