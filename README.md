@@ -1,35 +1,37 @@
 # Windows Ops Toolkit
 
-A compact toolkit of Windows-first scripts and templates for local project
-diagnostics, cleanup, DOCX handoff work, and agent troubleshooting.
+A single entry point for small, reusable Windows, project-handoff, teaching, and AI-workflow utilities.
 
-This repository also works as the index for a small public toolkit collection.
-See [Tool Index](docs/tool-index.md) for the related standalone tools.
+The rule is simple: finished products stay in their own repositories; small reusable tools live here.
 
-## Included Tools
+## Structure
+
+- `scripts/` and `src/windows_ops_toolkit/`: the original Windows diagnostics, cleanup, and DOCX helpers.
+- `ops/`: release sanitizing, project self-checks, and teacher handoff packaging.
+- `templates/`: image-prompt archiving and Jupyter teaching templates.
+- `experiments/`: useful automation experiments that are not products yet.
+- `docs/repository-map.md`: the complete consolidation map.
+
+## Core Windows Tools
 
 - `scripts/memory-usage-report.ps1`: group running processes by memory usage.
 - `scripts/safe-cache-cleanup.ps1`: dry-run-first cleanup for common cache folders.
 - `src/windows_ops_toolkit/docx_report.py`: build a DOCX report from JSON.
 - `src/windows_ops_toolkit/docx_integrity.py`: check DOCX zip/read integrity.
-- `docs/claude-code-windows-repair-playbook.md`: generic local agent repair checklist.
+- `docs/claude-code-windows-repair-playbook.md`: local agent repair checklist.
 - `docs/powershell-agent-snippets.md`: safe PowerShell snippets for local automation.
-- `scripts/app-install-on-non-c-drive.md`: checklist for installing apps outside `C:`.
 
-## Related Standalone Tools
+## Consolidated Utilities
 
-- [antigravity-zh-patch](https://github.com/20050401cc/antigravity-zh-patch):
-  Google Antigravity desktop Chinese UI patch.
-- [windows-release-sanitizer](https://github.com/20050401cc/windows-release-sanitizer):
-  create sanitized public release bundles from local Windows project folders.
-- [teacher-release-packager](https://github.com/20050401cc/teacher-release-packager):
-  create clean zip handoff packages for coursework, demos, and teacher submissions.
-- [jupyter-preprocessing-template](https://github.com/20050401cc/jupyter-preprocessing-template):
-  generate a flatten, normalize, and sigmoid teaching notebook.
-- [project-selfcheck-template](https://github.com/20050401cc/project-selfcheck-template):
-  run configurable file, compile, and smoke checks for project handoff folders.
-- [image-prompt-archive-template](https://github.com/20050401cc/image-prompt-archive-template):
-  archive image-generation prompts and export them to Markdown.
+| Path | Purpose |
+| --- | --- |
+| `ops/windows-release-sanitizer/` | Build sanitized public release folders and zip archives. |
+| `ops/project-selfcheck/` | Run required-file, Python compile, and smoke checks. |
+| `ops/project-selfcheck/` | Validate a project before delivery. |
+| `tools/teacher-release-packager/` | Create clean coursework and demo handoff packages. |
+| `templates/image-prompt-archive/` | Save prompts as JSONL and export Markdown. |
+| `templates/jupyter-preprocessing/` | Generate a runnable teaching notebook. |
+| `experiments/computer-use-lite/` | Screenshot-driven computer-use proof of concept. |
 
 ## Examples
 
@@ -45,39 +47,19 @@ Cache cleanup dry run:
 .\scripts\safe-cache-cleanup.ps1
 ```
 
-Actually clean supported cache folders:
-
-```powershell
-.\scripts\safe-cache-cleanup.ps1 -Execute
-```
-
 Generate a DOCX report:
 
 ```powershell
-python .\src\windows_ops_toolkit\docx_report.py `
-  --input .\examples\docx-report\report.json `
+python .\src\windows_ops_toolkit\docx_report.py \
+  --input .\examples\docx-report\report.json \
   --output .\examples\docx-report\report.docx
 ```
 
-Check DOCX integrity:
-
-```powershell
-python .\src\windows_ops_toolkit\docx_integrity.py .\examples\docx-report\report.docx --json
-```
-
-## Test
-
-```powershell
-python -m pytest tests -q
-```
-
-## Safety Notes
+## Safety
 
 - Cleanup defaults to dry run.
-- Scripts avoid deleting documents, desktop files, downloads, projects, or user
-  source folders.
-- Do not commit real API keys, cookies, tokens, local credentials, or private
-  project files.
+- Do not commit API keys, cookies, tokens, local credentials, or private project files.
+- The original standalone repositories remain as migration references until their archive/delete decisions are made separately.
 
 ## License
 
