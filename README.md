@@ -26,8 +26,7 @@ The rule is simple: finished products stay in their own repositories; small reus
 | Path | Purpose |
 | --- | --- |
 | `ops/windows-release-sanitizer/` | Build sanitized public release folders and zip archives. |
-| `ops/project-selfcheck/` | Run required-file, Python compile, and smoke checks. |
-| `ops/project-selfcheck/` | Validate a project before delivery. |
+| `ops/project-selfcheck/` | Run required-file, Python compile, and smoke checks before delivery. |
 | `tools/teacher-release-packager/` | Create clean coursework and demo handoff packages. |
 | `templates/image-prompt-archive/` | Save prompts as JSONL and export Markdown. |
 | `templates/jupyter-preprocessing/` | Generate a runnable teaching notebook. |
